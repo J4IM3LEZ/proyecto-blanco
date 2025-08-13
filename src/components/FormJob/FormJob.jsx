@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './FormJob.css'
 
-function FormJob({ onNameChange, onAgeChange, onColorlikeChange }){
+function FormJob({onFormSubmit}){
     const [name, setName]=useState('');
     const [age, setAge]=useState('');
     const [colorlike, setColorlike]=useState('');
