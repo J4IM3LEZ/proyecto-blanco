@@ -8,23 +8,26 @@ function FormJob({ onNameChange, onAgeChange, onColorlikeChange }){
 
     const handleInputName = (event) => {
         setName(event.target.value)
-        onNameChange(event.target.value)
+        //onNameChange(event.target.value)
     };
 
     const handleInputAge = (event) => {
         setAge(event.target.value)
-        onAgeChange(event.target.value)
+        //onAgeChange(event.target.value)
     };
 
     const handleInputColorlike = (event) => {
         setColorlike(event.target.value)
-        onColorlikeChange(event.target.val)
+        //onColorlikeChange(event.target.val)
     };
 
     const clickSubmitform = () => {
         if(name === '' || age === '' || colorlike === ''){
+            alert('Por favor, completa todos los campos');
+            return;
         };
         
+        onFormSubmit(name, age, colorlike)
     };  
 
     const handlerClickButtonSideOptions = (e) => {
