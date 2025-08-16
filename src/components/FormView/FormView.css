@@ -1,0 +1,10 @@
+.formView{
+    border: 3px solid rgb(84, 139, 126);
+    background-color: rgba(172, 255, 207, 0.685);
+}
+    
+.center{
+    text-align: center;
+    width: 250px;
+} 
+    

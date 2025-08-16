@@ -6,10 +6,6 @@ import './components/FormJob/FormJob.css'
 import FormView from './components/FormView/FormView'
 
 function App() {
-  const [name, setName]=useState('');
-  const [age, setAge]=useState('');
-  const [colorlike, setColorlike]=useState('');
-
   const [submittedName,setSubmittedName] = useState('');
   const [submittedAge,setSubmittedAge] = useState('');
   const [submittedColorLike,setSubmittedColorLike] = useState('');
@@ -45,7 +41,7 @@ function App() {
          isSubmitted={isSubmitted}
          onReset={handleReset}
         />
-        )};
+        )}
       </div>
     </div>
   );

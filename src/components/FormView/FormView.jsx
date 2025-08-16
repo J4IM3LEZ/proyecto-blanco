@@ -1,9 +1,10 @@
 import React from'react'
+import './FormView.css'
 
-function FormView({ name, age, colorlike,isSubmitted }){
+function FormView({ name, age, colorlike, isSubmitted }){
 
     return(
-        <div>
+        <div className='formView'>
             <h1>FormView</h1>
             {isSubmitted ?(
                 <>
