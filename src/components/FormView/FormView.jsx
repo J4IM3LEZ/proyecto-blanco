@@ -16,6 +16,11 @@ function FormView({ name, age, colorlike, isSubmitted, onReset }){
                     <span className='data-label'> Nombre:</span>
                     <span className='data-value'>{name}</span>
                 </div>
+
+                 <div className='data-item'>
+                    <span className='data-label'>Edad:</span>
+                    <span className='data-value'>{age}años</span>
+                </div>
                 
                 <div className='data-item'>
                     <span className='data-label'> Color Favorito:</span>

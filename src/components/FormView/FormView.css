@@ -19,9 +19,148 @@
 
 /* SECCION DEL TITULO */
 .header{
-    margin-bottom: 25px;
-    border-bottom: 2px solid rgba(46, 125, 50, 0.3);
-    padding-bottom: 15px;
+    margin-bottom: 25px;                                                                        /* Espacio de 25px abajo del header */
+    border-bottom: 2px solid rgba(51, 177, 57, 0.3);                                          /* linea divisoria verde transparete de 2px */
+    padding-bottom: 15px;                                                                       /* Espacio de 15px entre el texto y la linea */
 }
 
+/* ESTILO DEL TÍTULO PRINCIPAL */
+.header h1 {
+    color: #2e7d23;                                                                           /* Color verde oscuro */
+    font-size: 24px;                                                                            /* Tamaño de fuente 24px */
+    margin: 0;                                                                                  /* Elimana margenes por defecto */
+    font-weight: 700;                                                                           /* Texto en negrita muy gruesp */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)                                                 /* Sombra del texto: horizontal=0, vertical=2px, difuminado=4px */
+}
 
+/* CONTENEDOR DE TODOS LOS DATOS */
+.data-container{
+    display: flex;                                                                              /* Layout flexbox */
+    flex-direction: column;                                                                     /* Elementos apilados verticalmente */
+    gap: 20px;                                                                                  /* Espacio de 20px entre cada elemento */
+    margin: 25px 0;                                                                             /* Margen de 25px arriba y abajo, 0 a los lados */
+}
+
+/* CADA TARJETA DE DATO INDIVIDUAL */
+.data-item{
+    background: rgba(255, 255, 255, 0.7);                                                     /* Fondo blanco semi-transparente */                      
+    border: 2px solid rgba(46, 125 ,50, 0.2);                                                 /* Borde verde muy transparente de 2px */
+    border-radius: 12px;                                                                        /* Esquinas redondeadas de 12px */
+    padding: 15px 20px;                                                                         /* Espacio interno: 15px arriba/abajo, 20px izq/der */ 
+    display: flex;                                                                              /* Diseño de caja flexible */
+    justify-content: space-between;                                                             /* Separa elementos a los extremos */
+    align-items: center;                                                                        /* Centra verticalmente */
+    transition: all 0.3s ease;                                                                  /* Transición suave para todas las propiedades */
+}
+
+/* EFECTO AL PASAR MOUSE SOBRE CADA TARJETA */
+.data-item:hover{
+    background: rgba(255, 255, 255, 0.9);                                                     /* Fondo más opaco (menos transparente) */
+    border-color: rgba(46, 125, 50, 0.4);                                                     /* Borde más visible */
+    transform: translateX(5px);                                                                 /* Mueve 5px hacia la derecha */
+}
+
+/* ESTILO DE LAS ETIQUETAS (Nombre:, Edad:, etc.) */
+.data-label {
+    font-weight: 600;                                                                           /* Texto semi-negrita */
+    color: #1b5e20;                                                                           /* Verde muy oscuro */
+    font-size: 16px;                                                                            /* Tamaño de fuente 16px */
+    display: flex;                                                                              /* Layout flexbox */
+    align-items: center;                                                                        /* Centra verticalmente el emoji y texto */
+    gap: 8px;                                                                                   /* Espacio de 8px entre emoji y texto */
+}
+
+/* ESTILO DE LOS VALORES (Javier, 29, Morado) */
+.data-value {
+    font-weight: 500;                                                                           /* Texto medio-negrita */
+    color: #2e7d32;                                                                           /* Verde oscuro */
+    font-size: 18px;                                                                            /* Tamaño de fuente 18px (más grande que label) */
+    background: rgba(129, 199, 132, 0.3);                                                     /* Fondo verde claro transparente */
+    padding: 8px 15px;                                                                          /* Espacio interno: 8px arriba/abajo, 15px izq/der */
+    border-radius: 20px;                                                                        /* Forma de píldora (muy redondeado) */
+    border: 1px solid rgba(46, 125, 50, 0.3);                                                 /* Borde verde transparente de 1px */
+}
+
+/* SECCIÓN DE BOTONES */
+.actions {
+    margin-top: 30px;                                                                           /* Espacio de 30px arriba */
+    padding-top: 20px;                                                                          /* Espacio interno de 20px arriba */
+    border-top: 2px solid rgba(46, 125, 50, 0.3);                                             /* Línea divisoria verde en la parte superior */
+}
+
+/* BOTÓN DE RESET/VOLVER */
+.reset-button {
+    background: linear-gradient(135deg, #316b31, #dddddd);                                  /* Degradado azul diagonal */
+    color: white;                                                                             /* Texto blanco */
+    border: none;                                                                               /* Sin borde */
+    padding: 15px 30px;                                                                         /* Espacio interno: 15px arriba/abajo, 30px izq/der */
+    border-radius: 25px;                                                                        /* Muy redondeado (forma de píldora) */
+    font-size: 16px;                                                                            /* Tamaño de fuente 16px */
+    font-weight: 600;                                                                           /* Texto semi-negrita */
+    cursor: pointer;                                                                            /* Cambia cursor a manita al pasar mouse */
+    transition: all 0.3s ease;                                                                  /* Transición suave para todas las propiedades */
+    box-shadow: 0 4px 15px rgba(31, 94, 50, 0.3);                                             /* Sombra azul transparente */
+    display: flex;                                                                              /* Layout flexbox */
+    align-items: center;                                                                        /* Centra verticalmente emoji y texto */
+    justify-content: center;                                                                    /* Centra horizontalmente */
+    gap: 8px;                                                                                   /* Espacio entre emoji y texto */
+    margin: 0 auto;                                                                             /* Centra el botón horizontalmente */
+    min-width: 220px;                                                                           /* Ancho mínimo de 220px */
+}
+
+/* EFECTO AL PASAR MOUSE SOBRE EL BOTÓN */
+.reset-button:hover {
+    background: linear-gradient(135deg, #1976d2, #0d47a1);                                  /* Degradado azul más oscuro */
+    transform: translateY(-2px);                                                                /* Mueve 2px hacia arriba */
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);                                           /* Sombra más grande y marcada */
+}
+
+/* EFECTO AL HACER CLIC EN EL BOTÓN */
+.reset-button:active {
+    transform: translateY(0);                                                                   /* Vuelve a posición original */
+    box-shadow: 0 2px 10px rgba(25, 118, 210, 0.3);                                           /* Sombra más pequeña */
+}
+
+/* BORDE ANIMADO (EFECTO AVANZADO) */
+.formView::before {
+    content: '';                                                                                /* Elemento vacío (pseudo-elemento) */
+    position: absolute;                                                                         /* Posición absoluta */
+    top: -2px;                                                                                  /* 2px arriba del contenedor */
+    left: -2px;                                                                                 /* 2px a la izquierda */
+    right: -2px;                                                                                /* 2px a la derecha */
+    bottom: -2px;                                                                               /* 2px abajo */
+    background: linear-gradient(45deg, #4caf50, #81c784, #a5d6a7, #4caf50);            /* Degradado verde rotatorio */
+    border-radius: 17px;                                                                        /* Esquinas redondeadas (un poco más que el contenedor) */
+    z-index: -1;                                                                                /* Coloca detrás del contenedor */
+    opacity: 0;                                                                                 /* Invisible por defecto */
+    transition: opacity 0.3s ease;                                                              /* Transición de opacidad */
+}
+
+/* MUESTRA EL BORDE ANIMADO AL HACER HOVER */
+.formView:hover::before {
+    opacity: 0.7;                                                                               /* Se vuelve visible (70% opaco) */
+}
+
+/* CONTENEDOR CENTER */
+.center {
+    text-align: center;                                                                         /* Centra el texto */
+    width: auto;                                                                                /* Ancho automático */
+    position: relative;                                                                         /* Necesario para los pseudo-elementos */
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes slideIn {
+    from {
+        opacity: 0;                                                                             /* Empieza invisible */
+        transform: translateY(30px);                                                            /* Empieza 30px abajo */
+    }
+    to {
+        opacity: 1;                                                                             /* Termina visible */
+        transform: translateY(0);                                                               /* Termina en posición normal */
+    }
+}
+
+/* APLICA LA ANIMACIÓN AL CONTENEDOR */
+.formView {
+    animation: slideIn 0.5s ease-out;                                                           /* Ejecuta animación slideIn durante 0.5s con suavizado */
+}
