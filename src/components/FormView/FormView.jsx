@@ -44,4 +44,5 @@ function FormView({ name, age, colorlike, isSubmitted, onReset }){
     );
 };
 
+
 export default FormView;

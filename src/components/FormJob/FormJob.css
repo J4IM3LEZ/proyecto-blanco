@@ -1,7 +1,13 @@
 .formJob {
-    border: 3px solid rgb(84, 139, 126);
-    background-color: rgba(76, 185, 121, 0.685);
-    
+    border: 3px solid rgb(46, 125, 50);                                                       /* Borde verde solido de 3px */
+    background: linear-grandient(134deg, rgbq(172, 255, 207, 0,9), rgba(129, 199, 132, 0.8)); /* Fondo degradado verde diagonal */
+    border-radius: 15px;                                                                        /* Esquinas redondeadas de 15pixeles */  
+    padding: 30px;                                                                              /* Espacio interno de 30pixeles en todos lados*/
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);                                                /* Sombra: horizontal=0, verticual=8px, difuminado=32px color negro transparente*/
+    width: 350px;                                                                               /* Ancho fijo de 350px*/
+    text-align : center;                                                                        /* Centra todo el texto*/
+    backdrop-filter: blur(10px);                                                                /* Efecto en cristral esmerilado (desenfoque de fondo)*/
+    transition : all 0.3s ease;                                                                 /* Transcion suave de 0.3s para todas las propiedades*/
 }
 
 .center{
