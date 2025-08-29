@@ -1,5 +1,5 @@
 import React from 'react'
-import '/.HomeScreen.css'
+import './HomeScreen.css'
 
 function HomeScreen(){
     
@@ -8,18 +8,12 @@ function HomeScreen(){
             <div className='header'>
                 <h1> PáginaDeInicio</h1>
             </div>
-
             <div>
                 <button>
                     Formulario
                 </button>    
             </div>    
-        
-
-
         </div>
-
-
     )
 };
 
