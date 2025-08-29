@@ -1,15 +1,19 @@
 import React from 'react'
 import './HomeScreen.css'
 
-function HomeScreen(){
+function HomeScreen({onShowForm}){
     
     return(
         <div className='homeScreen'>
             <div className='header'>
                 <h1> PáginaDeInicio</h1>
             </div>
-            <div>
-                <button>
+            
+            <div className='actions'>
+                <button 
+                    className='primary-button'
+                    onClick={onShowForm}
+                >
                     Formulario
                 </button>    
             </div>    
