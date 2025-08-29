@@ -1,7 +1,7 @@
 import React from'react'
 import './FormView.css'
 
-function FormView({ name, age, colorlike, isSubmitted, onReset }){
+function FormView({ name, age, colorlike, onReset }){
 
     return(
         <div className='formView'>

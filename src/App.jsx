@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import FormJob from './components/FormJob/FormJob'
 import './App.css'
 import './index.css'
 import './components/FormJob/FormJob.css'
+import FormJob from './components/FormJob/FormJob'
 import FormView from './components/FormView/FormView'
+import HomeScreen from './components/HomeScreen/HomeScreen.Jsx'
+
 
 function App() {
   const [submittedName,setSubmittedName] = useState('');
@@ -16,7 +18,6 @@ function App() {
     setSubmittedAge(age);
     setSubmittedColorLike(colorlike);
     setIsSubmitted(true)
-
   }
 
   const handleReset = () =>{
@@ -26,22 +27,26 @@ function App() {
     setSubmittedColorLike('');
   }
 
+  
+
   return (
     <div className='container'>
       <div className='center'>
-        {!isSubmitted ?(
-        <FormJob
-          onFormSubmit={handleFormSubmit}
+        <HomeScreen
+          {!isSubmitted ?(
+          <FormJob
+            onFormSubmit={handleFormSubmit}
+          />
+          ):(
+          <FormView 
+          name={submittedName}
+          age={submittedAge}
+          colorlike={submittedColorLike}
+          isSubmitted={isSubmitted}
+          onReset={handleReset}
+          />
+          )}
         />
-        ):(
-        <FormView 
-         name={submittedName}
-         age={submittedAge}
-         colorlike={submittedColorLike}
-         isSubmitted={isSubmitted}
-         onReset={handleReset}
-        />
-        )}
       </div>
     </div>
   );
