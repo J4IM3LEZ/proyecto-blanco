@@ -5,10 +5,8 @@ function FormView({ name, age, colorlike, isSubmitted, onReset }){
 
     return(
         <div className='formView'>
-            {isSubmitted ?(
-            <>
             <div className='header'>
-                <h1>Datos Enviados Exitosamente</h1>
+                <h1>Datos Enviados</h1>
             </div>
 
             <div className='data-container'>               
@@ -19,7 +17,7 @@ function FormView({ name, age, colorlike, isSubmitted, onReset }){
 
                  <div className='data-item'>
                     <span className='data-label'>Edad:</span>
-                    <span className='data-value'>{age}años</span>
+                    <span className='data-value'>{age}</span>
                 </div>
                 
                 <div className='data-item'>
@@ -35,13 +33,10 @@ function FormView({ name, age, colorlike, isSubmitted, onReset }){
                 >
                     Nuevo Formulario
                 </button>
-            </div>
-             </>
-            ):(
-                 <p>Complete el formulario y presiona "Eviar Formulario" para ver los datos</p>                  
-            )}
-        </div>        
-    );
+            </div>  
+        </div>  
+    )  
+    
 };
 
 
