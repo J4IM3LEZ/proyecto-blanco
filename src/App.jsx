@@ -14,40 +14,41 @@ function App() {
   const [isSubmitted, setIsSubmitted]=useState(false);
   const [showForm, setShowFrom]=useState(false)
 
-  const handleFormSubmit = (name, age ,colorlike) =>{
+  const handleFormSubmit = (name, age ,colorlike) => {
     setSubmittedName(name);
     setSubmittedAge(age);
     setSubmittedColorLike(colorlike);
     setIsSubmitted(true)
   }
 
-  const handleReset = () =>{
+  const handleReset = () => {
     setIsSubmitted(false);
     setSubmittedName('');
     setSubmittedAge('');
     setSubmittedColorLike('');
   }
 
-  const handleShowForm = () =>{
+  const handleShowFrom = () => {
     setShowFrom(true);
 
   }
 
-  const handleBlackToHome = () =>
+  const handleBackToHome = () => {
     setShowFrom(false);
     setIsSubmitted(false);
     handleReset();
+  }
 
   return (
     <div className='container'>
       <div className='center'>
           {!isSubmitted ?(
-            <HomeScreen onShowForm={handleShowForm}/>
+            <HomeScreen onShowForm={handleShowFrom}/>
           ):( 
             !isSubmitted ?(
               <FormJob
                 onFormSubmit={handleFormSubmit}
-                onBack={handleBlackToHome}
+                onBack={handleBackToHome}
               />
             ):(
               <FormView 
