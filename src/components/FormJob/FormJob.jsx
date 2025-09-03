@@ -72,7 +72,7 @@ function FormJob({onFormSubmit}){
                 <button 
                     onClick={clickSubmitform}
                     type='button'>
-                    Enviar Formulario
+                Enviar Formulario
                 </button>
                 <p>
                 <button
@@ -91,7 +91,12 @@ function FormJob({onFormSubmit}){
                     onClick={handlerClickButtonSideOptions}>
                 Izquierda
                 </button>
-                </p>              
+                </p> 
+
+                <button
+                    id='buttonReturnHome'
+                    data
+
             </form>
         </div>
     );
