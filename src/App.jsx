@@ -12,7 +12,7 @@ function App() {
   const [submittedAge,setSubmittedAge] = useState('');
   const [submittedColorLike,setSubmittedColorLike] = useState('');
   const [isSubmitted, setIsSubmitted]=useState(false);
-  const [showForm, setShowFrom]=useState(false)
+  const [showFrom, setShowForm]=useState(false)
 
   const handleFormSubmit = (name, age ,colorlike) => {
     setSubmittedName(name);
@@ -28,13 +28,13 @@ function App() {
     setSubmittedColorLike('');
   }
 
-  const handleShowFrom = () => {
-    setShowFrom(true);
+  const handleShowForm = () => {
+    setShowForm(true);
 
   }
 
   const handleBackToHome = () => {
-    setShowFrom(false);
+    setShowForm(false);
     setIsSubmitted(false);
     handleReset();
   }
@@ -42,8 +42,8 @@ function App() {
   return (
     <div className='container'>
       <div className='center'>
-          {!isSubmitted ?(
-            <HomeScreen onShowForm={handleShowFrom}/>
+          {!showFrom ?(
+            <HomeScreen onShowForm={handleShowForm}/>
           ):( 
             !isSubmitted ?(
               <FormJob

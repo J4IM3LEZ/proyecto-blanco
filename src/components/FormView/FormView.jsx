@@ -15,7 +15,7 @@ function FormView({ name, age, colorlike, onReset }){
                     <span className='data-value'>{name}</span>
                 </div>
 
-                 <div className='data-item'>
+                <div className='data-item'>
                     <span className='data-label'>Edad:</span>
                     <span className='data-value'>{age}</span>
                 </div>
