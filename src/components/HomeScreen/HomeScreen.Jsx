@@ -6,7 +6,7 @@ function HomeScreen({onShowForm}){
     return(
         <div className='homeScreen'>
             <div className='header'>
-                <h1> PáginaDeInicio</h1>
+                <h1> PaginaDeInicio🔍</h1>
             </div>
             
             <div className='actions'>
