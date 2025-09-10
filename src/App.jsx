@@ -4,7 +4,7 @@ import './index.css'
 import './components/FormJob/FormJob.css'
 import FormJob from './components/FormJob/FormJob'
 import FormView from './components/FormView/FormView'
-import HomeScreen from './components/HomeScreen/HomeScreen.Jsx'
+import HomeScreen from './components/HomeScreen/HomeScreen'
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   const [submittedAge,setSubmittedAge] = useState('');
   const [submittedColorLike,setSubmittedColorLike] = useState('');
   const [isSubmitted, setIsSubmitted]=useState(false);
-  const [showFrom, setShowForm]=useState(false)
+  const [showForm, setShowForm]=useState(false)
 
   const handleFormSubmit = (name, age ,colorlike) => {
     setSubmittedName(name);
@@ -42,7 +42,7 @@ function App() {
   return (
     <div className='container'>
       <div className='center'>
-          {!showFrom ?(
+          {!showForm ?(
             <HomeScreen onShowForm={handleShowForm}/>
           ):( 
             !isSubmitted ?(
