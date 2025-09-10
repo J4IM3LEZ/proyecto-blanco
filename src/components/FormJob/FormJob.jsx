@@ -37,7 +37,7 @@ function FormJob({onFormSubmit}){
 
     return(
         <div className='formJob'>
-           <form>
+        <form>
             <h1>FORM 🚀</h1>
                 <p>
                 <input
@@ -95,9 +95,9 @@ function FormJob({onFormSubmit}){
 
                 <button
                     id='buttonReturnHome'
-                    data
-
-            </form>
+                    data>
+                </button>
+        </form>
         </div>
     );
 };
